@@ -29,6 +29,13 @@
 
   <ItemGroup>
     <None Remove="ClientApp\src\app\nav-menu\usuario.component.ts" />
+    <None Remove="ClientApp\src\app\usuario\IUsuario.ts" />
+    <None Remove="ClientApp\src\app\usuario\usuario.service.ts" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <TypeScriptCompile Include="ClientApp\src\app\usuario\IUsuario.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\usuario\usuario.service.ts" />
   </ItemGroup>
 
   <Target Name="DebugEnsureNodeEnv" BeforeTargets="Build" Condition=" '$(Configuration)' == 'Debug' And !Exists('$(SpaRoot)node_modules') ">
