@@ -17,13 +17,6 @@ namespace AngularAPI.Models
 
         public virtual DbSet<Aluno> Aluno { get; set; }
 
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        {
-            if (!optionsBuilder.IsConfigured)
-            {
-                optionsBuilder.UseMySql("server=localhost;database=angular;uid=root;pwd=;");
-            }
-        }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

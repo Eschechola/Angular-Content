@@ -12,7 +12,12 @@ namespace AngularAPI.Controllers
     [ApiController]
     public class AlunosController : ControllerBase
     {
-        angularContext _context = new angularContext();
+        angularContext _context;
+
+        public AlunosController(angularContext context)
+        {
+            _context = context;
+        }
 
         public IActionResult Index()
         {
