@@ -1,2 +1,3 @@
-# angular-crud
-Consumindo uma webAPI utilizando Angular 5+ e .Net Core 3.0
+# angular-content
+
+Projetos criados no curso de Angular 2+ Loiane Groner
