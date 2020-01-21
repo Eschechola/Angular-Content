@@ -17,5 +17,64 @@
         <img [src]="urlImagem" width="20%">
         <img bind-src="urlImagem" width="20%">
     </article>
+
+    <br><br><br>
+
+    <article>
+        <!-- npm install ng2-bootstrap bootstrap --save -->
+        <!--INSTALÇAO DO NG2BOOTSTRAP > ALTERNATIVA PARA NAO USARMOS JQUERY-->
+        <h3>Class e Style Binding</h3>
+
+        <div>
+            Selecione uma classe:
+
+            <!-- #variavel =  variavel local de template para acessar o valor -->
+            <!-- (change) evento que será escutado em caso de alteraçao -->
+            <select #classe (change)="0">
+                <option value="alert-success">Sucesso</option>
+                <option value="alert-info">Info</option>
+                <option value="alert-danger">Perigo</option>
+                <option value="alert-warning">Aviso</option>
+            </select>
+
+            <br><br>
+
+            <div class="alert {{ classe.value }}" role="alert">
+                Texto colorido
+            </div>
+
+            <br><br>
+
+
+            <!--class.alert-success é a classe que será colocada na div-->
+            <!--Somente se o valor de classe for igual a alert-success-->
+            <!--escutarão todas as vezes que o change for mudado-->
+            <div class="alert" role="alert" [class.alert-success]="classe.value == 'alert-success'" >
+                Sucesso
+            </div>
+
+
+            <div class="alert" role="alert" [class.alert-info]="classe.value == 'alert-info'" >
+                Info
+            </div>
+
+            <div class="alert" role="alert" [class.alert-danger]="classe.value == 'alert-danger'" >
+                Perigo
+            </div>
+            
+            <div class="alert" role="alert" [class.alert-warning]="classe.value == 'alert-warning'" >
+                Cuidado
+            </div>
+
+            <br><br><br>
+
+            <div class="alert alert-danger" role="alert"
+                [style.display]="classe.value == 'alert-danger' ? 'block' : 'none' ">
+                Texto só irá aparecer em caso de erro
+            </div>
+        </div>
+
+
+    </article>
 </section>
 
