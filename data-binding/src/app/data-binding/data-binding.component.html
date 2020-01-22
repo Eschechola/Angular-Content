@@ -78,3 +78,43 @@
     </article>
 </section>
 
+
+<section>
+    <article>
+        <h3>Event binding</h3>
+
+        <div>
+            <button class="btn btn-primary" (click)="botaoClicado()" >Click me</button>
+            <br>
+        </div>
+
+        <br><br>
+
+        <!--PASSA O QUE FOI DIGITADO NO INPUT PARA O MÉTODO-->
+        <!--PODE SER USADO EVENT TARGET OU TRANSFORMAR O INPUT NUMA VARIAVEL-->
+        <input type="text"
+            #campoInput
+            (keyup)="onKeyUp($event)"
+            (keyp.enter)="salvarValor(campoInput.value)"
+            (blur)="salvarBlur(campoInput.value)"> 
+
+        <br><br>
+
+        <p>Pressionar tecla: {{ valorAtual }}</p>
+        <br>
+        <p>Ao pressionar enter: {{ valorSalvo }}</p>
+        <br>
+        <p>Ao perder o foco: {{ valorBlur }}</p>
+        
+        <br><br>
+        <br><br>
+
+        <span
+            (mouseover)="onMouseOver()"
+            (mouseout)="onMouseOut()">
+            Passe o mouse e retire
+        </span>
+        
+    </article>
+</section>
+
