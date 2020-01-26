@@ -1,0 +1,50 @@
+<section>
+    <article>
+        <h3>Two-Way data binding</h3>
+        <!--ATUALIZAR O TEMPLATE E O COMPONENTE AO MESMO TEMPO-->
+
+        <div>
+            <!--PASSAR O VALOR DO TEMPLATE PARA O COMPONENT E ATUALIZAR O CAMPO-->
+            <!--(INPUT) EVENTO QUANDO O CAMPO É ATUALZIDO-->
+            <input type="text"
+                [value]="nome"
+                (input)="nome = $event.target.value"
+            />
+
+            <!--PODE ATRIBUIR UM MODEL AO FORMULARIO-->
+           <!--ADICIONAR MODULE ANGULAR FORMS-->
+           <!-- https://pt.stackoverflow.com/questions/260022/cant-bind-to-ngmodel-since-it-isnt-a-known-property-of-input -->
+            <input type="text"
+                [ngModel]="nome"
+                (ngModelChange)="nome = $event"
+            />
+
+            <br><br><br>
+            
+            <!--BINDING DE PROPRIEDADE [] + BINDING DE EVENTO ()-->
+            <!-- [()] sintaxe banana na caixa -->
+            <input type="text" [(ngModel)]="nome">
+
+            <br><br><br>
+            <p>Você digitou: {{ nome }}</p>
+
+            <br><br><br><br>
+
+            <label>Nome: </label>
+            <br>
+            <input type="text" [(ngModel)]="pessoa.nome">
+            
+            <br>
+
+            <label>Idade: </label>
+            <br>
+            <input type="text" [(ngModel)]="pessoa.idade">
+
+           <br><br><br>
+
+            <p>O nome da pessoa é: {{ pessoa.nome }}</p>
+            <p>A idade da pessoa é: {{ pessoa.idade }}</p>
+
+        </div>
+    </article>
+</section>

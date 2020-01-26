@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
+
 @Component({
   selector: 'app-data-binding',
   templateUrl: './data-binding.component.html',
@@ -68,6 +69,17 @@ export class DataBindingComponent implements OnInit {
 
   onMouseOut(){
     alert('Mouse removido');
+  }
+
+
+  /* TWO - WAY DATA BINDING */
+
+
+  nome: string = 'abc';
+
+  pessoa: any = {
+    nome: 'Lucas',
+    idade: 17
   }
 
   constructor() { }
