@@ -74,7 +74,6 @@ export class DataBindingComponent implements OnInit {
 
   /* TWO - WAY DATA BINDING */
 
-
   nome: string = 'abc';
 
   pessoa: any = {
@@ -82,6 +81,14 @@ export class DataBindingComponent implements OnInit {
     idade: 17
   }
 
+
+
+  /* Input/Output Properties */
+  nomeDoCurso: string = 'Angular';
+  
+  
+  
+  
   constructor() { }
 
   ngOnInit() {
