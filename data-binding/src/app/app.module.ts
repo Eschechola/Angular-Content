@@ -7,12 +7,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { DataBindingComponent } from './data-binding/data-binding.component';
 import { InputPropertyComponent } from './input-property/input-property.component';
+import { OutputPropertComponent } from './output-propert/output-propert.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     DataBindingComponent,
-    InputPropertyComponent
+    InputPropertyComponent,
+    OutputPropertComponent
     
   ],
   imports: [

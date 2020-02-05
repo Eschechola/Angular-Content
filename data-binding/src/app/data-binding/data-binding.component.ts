@@ -83,11 +83,14 @@ export class DataBindingComponent implements OnInit {
 
 
 
-  /* Input/Output Properties */
+  /* Input Properties */
   nomeDoCurso: string = 'Angular';
   
   
-  
+  /* OUTPUT PROPERTIES */
+  onMudouValor(valor){
+    console.log(valor);
+  }
   
   constructor() { }
 
