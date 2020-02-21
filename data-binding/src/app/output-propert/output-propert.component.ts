@@ -1,10 +1,12 @@
-import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter, ViewChild, ElementRef } from '@angular/core';
 
 @Component({
   selector: 'contador',
   templateUrl: './output-propert.component.html',
   styleUrls: ['./output-propert.component.css']
 })
+
+
 export class OutputPropertComponent implements OnInit {
 
   //expor esse valor para outros componentes
@@ -14,7 +16,14 @@ export class OutputPropertComponent implements OnInit {
   //no caso, quem chama (pai) é o data-binding component
   @Output() mudouValor = new EventEmitter();
 
+
+  @ViewChild('campoInput') campoValorInput: ElementRef;
+
   Incrementa(){
+    
+    //pode ser usar assim definindo uma varipavel ao html
+    //this.campoValorInput.nativeElement.value++;
+
     this.valor += 1;
 
     //emite um valor para o componente pai
